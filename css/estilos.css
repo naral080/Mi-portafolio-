@@ -3,8 +3,8 @@
 --verde:#88A47C;
 --aguamarina:#227C70;
 --azul:#1C315E;
+--azulclaro:#6D67E4;
 --fuentePrincipal:20rem;
-
 
 
 }
@@ -12,7 +12,8 @@ html{
     font-size: 62.5%;
 }
 body{
-    font-size: 16px; /* 1rem = 10px */
+    font-size: 18px; /* 1rem = 10px */
+    font-family: 'Kanit', sans-serif;
 }
 
 .titulo{
@@ -21,7 +22,10 @@ body{
     color:var(--azul)
 }
 
-
+.titulo span{
+    font-size: 2rem;
+    color:var(--azulclaro)
+}
 
 
 
