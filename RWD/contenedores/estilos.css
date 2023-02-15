@@ -38,3 +38,18 @@ h1 {
     text-transform: uppercase;
 
 }
+
+
+.conBox{
+    width: 60rem;
+    height: 60rem;
+    background-color: blueviolet;
+}
+
+.sinBox{
+    width: 60rem;
+    height: 60rem;
+    background-color: darkgray;
+    padding: 2rem;
+    border:3rem solid orange;
+}
