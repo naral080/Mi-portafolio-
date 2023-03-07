@@ -1,46 +1,219 @@
-:root{
---beige:#E6E2C3;
---verde:#88A47C;
---aguamarina:#227C70;
---azul:#1C315E;
---azulclaro:#6D67E4;
---fuentePrincipal:20rem;
-
+:root {
+    --beige: #E6E2C3;
+    --verde: #88A47C;
+    --aguamarina: #227C70;
+    --azul: #1C315E;
+    --azulclaro: #6D67E4;
+    --fuentePrincipal: 3rem;
 
 }
-html{
+
+
+*,
+*:before,
+*::after {
+    box-sizing: inherit;
+}
+
+
+
+html {
     font-size: 62.5%;
+    box-sizing: border-box;
 }
-body{
-    font-size: 18px; /* 1rem = 10px */
+
+body {
+    font-size: 18px;
     font-family: 'Kanit', sans-serif;
 }
 
-.titulo{
-    text-align: center;
+h1 {
     font-size: 3.8rem;
-    color:var(--azul)
 }
 
-.titulo span{
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+
+.titulo {
+    color: var(--azul);
+}
+
+.titulo span {
     font-size: 2rem;
-    color:var(--azulclaro)
+    color: var(--azulclaro);
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.nav_principal {
+    background-color: var(--azulclaro);
+}
+
+.nav a {
+    display: block;
+    text-align: center;
+    color: var(--beige);
+    text-decoration: none;
+    font-size: var(--fuentePrincipal);
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav a:hover {
+    background-color: var(--beige);
+    color: var(--azul);
 }
 
 
+@media(min-width: 780px) {
+
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
 
 
+.imagen_encabezado{
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-simple-gradient-e-commerce-web-page-image_20835.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+}
+
+.contenido_encabezado{
+    position: absolute;
+    background: rgb(0 0 0 /65%);
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.ubicacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido_encabezado h2,
+.contenido_encabezado p{
+    color: var(--beige);
+    font-size: var(--fuentePrincipal);
+}
+
+.btn_contact{
+    background-color: var(--azulclaro);
+    color: var(--beige);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
 
 
+@media(min-width: 768px){
+    .btn_contact{
+        width: auto;
+    }
+}
 
-.icon-copy:before {
-    content: "\1f320";
-  }
 
-  .form {
+.btn_contact:hover{
+    cursor: pointer;
+}
+
+
+.imagen_encabezado2{
+    background-image: url(https://pinguinodigital.com/wp-content/uploads/2020/06/Fondo-web-6-.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+}
+.contenido_encabezado2{
+    position: absolute;
+    background: rgb(0 0 0 /65%);
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.ubicacion2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn_contact2{
+    background-color: var(--azulclaro);
+    color: var(--beige);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+.contenido_encabezado2 h3,
+.contenido_encabezado2 p{
+    color: var(--beige);
+    font-size: var(--fuentePrincipal);
+}
+
+
+@media(min-width: 768px){
+    .btn_contact2{
+        width: auto;
+    }
+}
+
+
+.btn_contact2:hover{
+    cursor: pointer;
+}
+
+.form {
     margin: 0 auto;
     width: 400px;
     padding: 1em;
     border: 1px solid #CCC;
     border-radius: 1em;
-  }
+}
