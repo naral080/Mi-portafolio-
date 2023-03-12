@@ -55,33 +55,49 @@ h3 {
     color: var(--azulclaro);
 }
 
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
+
+
+
+.sub-menu-parent {
+    position: relative;
 }
 
-.nav_principal {
-    background-color: var(--azulclaro);
+
+body {
+    padding: 2%;
+    font: 18px/1.4 sans-serif;
 }
 
-.nav a {
+nav a {
+    color: #ffffff;
     display: block;
-    text-align: center;
-    color: var(--beige);
+    padding: 0.5em 1em;
     text-decoration: none;
-    font-size: var(--fuentePrincipal);
-    font-weight: 700;
-    padding: 1rem;
 }
 
-.nav {
-    display: flex;
-    flex-direction: column;
-}
-
-.nav a:hover {
-    background-color: var(--beige);
+nav a:hover {
     color: var(--azul);
+}
+
+nav ul,
+nav ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav>ul {
+    background: var(--azulclaro);
+    text-align: center;
+}
+
+nav>ul>li {
+    display: inline-block;
+    border-left: solid 1px #aaa;
+}
+
+nav>ul>li:first-child {
+    border-left: none;
 }
 
 
@@ -94,7 +110,7 @@ h3 {
 }
 
 
-.imagen_encabezado{
+.imagen_encabezado {
     background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190221/ourmid/pngtree-simple-gradient-e-commerce-web-page-image_20835.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -102,30 +118,30 @@ h3 {
     position: relative;
 }
 
-.contenido_encabezado{
+.contenido_encabezado {
     position: absolute;
     background: rgb(0 0 0 /65%);
-   width: 100%;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.ubicacion{
+.ubicacion {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .contenido_encabezado h2,
-.contenido_encabezado p{
+.contenido_encabezado p {
     color: var(--beige);
     font-size: var(--fuentePrincipal);
 }
 
-.btn_contact{
+.btn_contact {
     background-color: var(--azulclaro);
     color: var(--beige);
     padding: 1rem 3rem;
@@ -141,44 +157,45 @@ h3 {
 }
 
 
-@media(min-width: 768px){
-    .btn_contact{
+@media(min-width: 768px) {
+    .btn_contact {
         width: auto;
     }
 }
 
 
-.btn_contact:hover{
+.btn_contact:hover {
     cursor: pointer;
 }
 
 
-.imagen_encabezado2{
+.imagen_encabezado2 {
     background-image: url(https://pinguinodigital.com/wp-content/uploads/2020/06/Fondo-web-6-.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 45rem;
     position: relative;
 }
-.contenido_encabezado2{
+
+.contenido_encabezado2 {
     position: absolute;
     background: rgb(0 0 0 /65%);
-   width: 100%;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.ubicacion2{
+.ubicacion2 {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 
-.btn_contact2{
+.btn_contact2 {
     background-color: var(--azulclaro);
     color: var(--beige);
     padding: 1rem 3rem;
@@ -192,28 +209,127 @@ h3 {
     text-align: center;
     border: none;
 }
+
 .contenido_encabezado2 h3,
-.contenido_encabezado2 p{
+.contenido_encabezado2 p {
     color: var(--beige);
     font-size: var(--fuentePrincipal);
 }
 
 
-@media(min-width: 768px){
-    .btn_contact2{
+@media(min-width: 768px) {
+    .btn_contact2 {
         width: auto;
     }
 }
 
 
-.btn_contact2:hover{
+.btn_contact2:hover {
     cursor: pointer;
 }
 
-.form {
+
+
+.sombra {
+    box-shadow: 0px 5px 15px 0px rgb(112 112 112);
+    background-color: #CCC;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.contenedor_main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    align-items: baseline;
+}
+
+@media (min-width: 768px) {
+    .contenedor_main {
+        display: grid;
+        column-gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: baseline;
+    }
+}
+
+.contenedor_main h4 {
+    color: var(--azul);
+    font-weight: normal;
+}
+
+.contenedor_main .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--beige);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forms {
+    background-color: rgb(87, 75, 60);
+    width: min(60rem, 100%);
     margin: 0 auto;
-    width: 400px;
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
+    padding: 2rem;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+.forms fieldset {
+    border: none;
+}
+
+.forms fieldset legend {
+    margin: 0 auto;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--azulclaro);
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input_text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+@media (min-width: 768px) {
+
+    .btn_form {
+        justify-content: flex-end;
+    }
+
+    .btn_form .btn_contact {
+        width: auto;
+    }
+}
+
+.btn_form {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
 }

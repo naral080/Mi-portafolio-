@@ -1,2 +1,0 @@
-# RWD
- Maquetación y JS
